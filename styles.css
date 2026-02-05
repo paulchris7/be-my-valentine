@@ -21,23 +21,33 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, var(--background-color-1), var(--background-color-2));
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif; /* Updated font family */
     overflow-x: hidden;
 }
 
+/* Glassmorphism Container */
 .container {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     text-align: center;
-    max-width: 600px;
+    width: 95%; /* Mobile-first width */
+    max-width: 600px; /* Desktop max-width */
     margin: 20px;
     overflow: visible !important;
+    position: relative;
+    z-index: 2;
 }
 
+/* Floating Elements */
 .floating-elements {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -59,33 +69,127 @@ body {
     }
 }
 
+/* Buttons */
 .cute-btn {
     background: var(--button-color);
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Larger touch target */
     margin: 10px;
-    border-radius: 20px;
+    border-radius: 25px;
     color: white;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    min-height: 44px; /* Accessibility requirement */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 .cute-btn:hover {
-    transform: scale(1.1);
+    transform: translateY(-2px);
     background: var(--button-hover);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
 .hidden {
     display: none;
 }
 
-.disabled-btn {
-    opacity: 0.7;
-    cursor: not-allowed;
-    pointer-events: none;
+/* Slideshow / Polaroid Style */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
 }
 
+.slide-frame {
+    background: white;
+    padding: 15px 15px 50px 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: inline-block; /* Adjust to wrap content */
+}
+
+.slide-frame:hover {
+    transform: rotate(0deg) scale(1.02);
+    z-index: 10;
+}
+
+.slide-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+}
+
+.slide-caption {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 15px;
+}
+
+.slide-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Menu Card Style */
+.menu-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.menu-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px dashed #ffc3a0;
+    padding-bottom: 10px;
+}
+
+.menu-option {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-option:hover {
+    background: #fff5f5;
+}
+
+.menu-option label {
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.menu-response {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+    padding-left: 25px;
+}
+
+/* Secret Answer */
 .secret-answer {
     position: fixed;
     bottom: 20px;
@@ -101,7 +205,8 @@ body {
 
 .secret-answer .cute-btn {
     font-size: 0.8rem;
-    padding: 5px 10px;
+    padding: 8px 16px;
+    min-height: auto;
 }
 
 .secret-answer:hover {
@@ -109,10 +214,11 @@ body {
     animation: none;
 }
 
+/* Love Meter */
 .love-meter {
     position: relative;
     width: 100%;
-    margin: 20px auto;
+    margin: 30px auto;
     overflow: visible;
     padding: 10px 0;
 }
@@ -141,22 +247,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.slider:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
-}
-
-/* Ensure track is visible */
-.slider::-webkit-slider-runnable-track,
-.slider::-moz-range-track {
-    width: 100%;
-    height: 25px;
-    background: linear-gradient(to right, #ff6b6b, #ff8787, #ffb8b8);
-    border-radius: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-/* Ensure thumb is properly styled */
+/* Custom Slider Thumb */
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 35px;
@@ -172,11 +263,6 @@ body {
     transition: all 0.2s ease;
 }
 
-.slider::-webkit-slider-thumb:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
-}
-
 .slider::-moz-range-thumb {
     width: 35px;
     height: 35px;
@@ -188,11 +274,6 @@ body {
     z-index: 10;
     border: 3px solid white;
     transition: all 0.2s ease;
-}
-
-.slider::-moz-range-thumb:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
 }
 
 #extraLove {
@@ -208,13 +289,6 @@ body {
     margin-top: 5px;
 }
 
-#extraLove.super-love {
-    background: rgba(255, 107, 107, 0.2);
-    font-size: 1.2em;
-    padding: 8px 15px;
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.2);
-}
-
 #loveValue {
     font-weight: bold;
     color: #ff4757;
@@ -222,70 +296,42 @@ body {
     transition: all 0.3s ease;
 }
 
-.love-value-container {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-@keyframes bounce {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.2);
-    }
-}
-
-.hearts-explosion {
-    font-size: 2rem;
-    animation: explode 1s ease-out forwards;
-    margin-top: 30px;
-}
-
-@keyframes explode {
-    0% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(var(--heart-explosion-size));
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-h1, h2 {
-    font-family: Arial, sans-serif;
-    font-weight: 700;
-}
-
+/* Typography */
 h1 {
+    font-family: 'Dancing Script', cursive;
     color: #ff6b6b;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
 h2 {
+    font-family: 'Poppins', sans-serif;
     color: #ff8787;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
-.super-love {
-    font-size: 1.5em;
-    color: #ff4757;
-    font-weight: bold;
-    transform: scale(1.2);
-    display: inline-block;
-    text-shadow: 2px 2px 4px rgba(255, 71, 87, 0.3);
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
 }
 
-
+/* Celebration */
 .celebration-text {
-    font-size: 3em;
+    font-size: 2rem;
     color: #ff4757;
     font-weight: bold;
-    margin: 30px 0;
+    margin: 20px 0;
     animation: bounce var(--bounce-speed) infinite alternate;
     text-shadow: 2px 2px 4px rgba(255, 71, 87, 0.3);
+}
+
+@keyframes bounce {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
 }
 
 @keyframes subtle-hint {
@@ -293,26 +339,78 @@ h2 {
     100% { opacity: 0.3; }
 }
 
+/* Music Controls */
 .music-controls {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: absolute; /* Changed to absolute within container for better mobile layout or keep fixed if desired */
+    top: 10px;
+    right: 10px;
     z-index: 1000;
 }
 
 .music-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--button-color);
+    border: 2px solid var(--button-color);
+    padding: 8px 15px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-weight: 600;
 }
 
 .music-btn:hover {
     transform: scale(1.05);
-    background: var(--secondary-color);
-} 
+    background: var(--button-color);
+    color: white;
+}
+
+/* Menu Reveal Image */
+.menu-reveal-img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        margin: 10px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .slide-caption {
+        font-size: 1.2rem;
+    }
+
+    .cute-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .music-controls {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+}

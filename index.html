@@ -29,8 +29,39 @@
             </audio>
         </div>
 
-        <!-- First Question -->
-        <div class="question-section" id="question1">
+        <!-- 1. Itinerary Section -->
+        <div id="itinerarySection" class="question-section">
+            <h2 id="itineraryTitle"></h2>
+            <p id="itinerarySubtitle"></p>
+            <div class="slideshow-container">
+                <img id="itineraryImage" src="" alt="Romantic Trip" class="slide-image">
+                <p id="itineraryCaption" class="slide-caption"></p>
+                <div class="slide-controls">
+                    <button class="cute-btn" id="prevSlideBtn">⬅️</button>
+                    <button class="cute-btn" id="nextSlideBtn">➡️</button>
+                </div>
+            </div>
+            <button class="cute-btn" id="itineraryNextBtn" style="margin-top: 20px;">Go to Dinner 🍽️</button>
+        </div>
+
+        <!-- 2. Dinner Menu Section -->
+        <div id="dinnerMenuSection" class="question-section hidden">
+            <h2 id="menuTitle"></h2>
+            <p id="menuSubtitle"></p>
+            <div id="courseDisplay" class="menu-display">
+                <!-- Dynamic options area -->
+            </div>
+            
+            <div id="selectionResult">
+                <img id="menuSelectionImage" class="menu-reveal-img hidden" alt="Delicious Choice" />
+                <p id="resultText"></p>
+            </div>
+
+            <button class="cute-btn" id="menuNextBtn" style="margin-top: 20px;">Next ❤️</button>
+        </div>
+
+        <!-- 3. First Question (Original) -->
+        <div id="question1" class="question-section hidden">
             <h2 id="question1Text"></h2>
             <button class="cute-btn" onclick="moveButton(this)" id="yesBtn1"></button>
             <button class="cute-btn" onclick="moveButton(this)" id="noBtn1"></button>
@@ -40,8 +71,8 @@
             </div>
         </div>
 
-        <!-- Second Question (Love Meter) -->
-        <div class="question-section hidden" id="question2">
+        <!-- 4. Second Question (Love Meter) -->
+        <div id="question2" class="question-section hidden">
             <h2 id="question2Text"></h2>
             <!-- Love meter settings: min="0" max="10000" -->
             <div class="love-meter">
@@ -54,15 +85,15 @@
             <button class="cute-btn" onclick="showNextQuestion(3)" id="nextBtn"></button>
         </div>
 
-        <!-- Final Question -->
-        <div class="question-section hidden" id="question3">
+        <!-- 5. Final Question -->
+        <div id="question3" class="question-section hidden">
             <h2 id="question3Text"></h2>
             <button class="cute-btn final-yes" onclick="celebrate()" id="yesBtn3"></button>
             <button class="cute-btn" onclick="moveButton(this)" id="noBtn3"></button>
         </div>
 
-        <!-- CUSTOMIZE: Celebration message -->
-        <div class="celebration hidden" id="celebration">
+        <!-- 6. Celebration -->
+        <div id="celebration" class="celebration hidden" id="celebration">
             <h2 id="celebrationTitle"></h2>
             <p class="celebration-text" id="celebrationMessage"></p>
             <p class="celebration-text" id="celebrationEmojis"></p>
