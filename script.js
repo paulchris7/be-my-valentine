@@ -292,10 +292,7 @@ function setupQuestions() {
     document.getElementById('noBtn1').textContent = config.questions.first.noBtn;
     document.getElementById('secretAnswerBtn').textContent = config.questions.first.secretAnswer;
 
-    // Yes Button 1
-    document.getElementById('yesBtn1').addEventListener('click', () => {
-        showSection('question2');
-    });
+    // Yes Button 1 - Disabled (do nothing)
 
     // No Button 1 (Move away)
     document.getElementById('noBtn1').addEventListener('mouseover', moveButton);
@@ -366,8 +363,8 @@ function setupQuestions() {
 // Helper: Move Button
 function moveButton(e) {
     const btn = e.target;
-    const x = Math.random() * (window.innerWidth - btn.offsetWidth);
-    const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+    const x = Math.random() * (window.innerWidth - btn.offsetWidth - 20);
+    const y = Math.random() * (window.innerHeight - btn.offsetHeight - 20);
     btn.style.position = 'fixed';
     btn.style.left = `${x}px`;
     btn.style.top = `${y}px`;
