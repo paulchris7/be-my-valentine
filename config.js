@@ -34,14 +34,14 @@ const CONFIG = {
 
     // Love meter messages
     loveMessages: {
-        extreme: "Yessssss🚀💝",  // Shows when they go past 5000%
+        extreme: "E noul yeeeeeeeeee 🥰",  // Shows when they go past 5000%
         high: "Emwenl yeeeeeee 🚀💝",              // Shows when they go past 1000%
-        normal: "E noul yeeeeeeeeee 🥰"                           // Shows when they go past 100%
+        normal: " Yessssss🚀💝 "                           // Shows when they go past 100%
     },
 
     // Messages that appear after "Yes!"
     celebration: {
-        title: "I'm the luckiest person in the world💓",
+        title: "With you I'm the luckiest person in the world💓",
         message: "I promise to make every day feel as special as Valentine Day. I love you so much manmie 💖",
         emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
     },
@@ -70,11 +70,11 @@ const CONFIG = {
         enabled: true,                     // Music feature is enabled
         autoplay: true,                    // Try to autoplay (note: some browsers may block this)
         musicUrl: "https://res.cloudinary.com/dzm3up8i2/video/upload/v1770404177/Fem-kadow_sc0lxl.mp3", // Music streaming URL
-        volume: 0.5
+        volume: 0.2
     },
 
     monologue: {
-        text: "Ma chérie, je sais à quel point ce 14 février est important pour nous. C'est justement pour ça que j'ai voulu faire les choses un peu différemment cette année et te préparer ce petit site, juste pour toi. Alors j’ai une question toute simple à te poser : est-ce que tu es libre le 14 février ?",
+        text: "Je sais à quel point ce 14 février est important pour nous. C'est justement pour ça que j'ai voulu faire les choses un peu différemment et te préparer ce petit site, juste pour toi. Alors j’ai une question toute simple à te poser : est-ce que tu es libre le 14 février ?",
         yesBtn: "Yes, I am ❤️",
         noBtn: "No, I'm busy",
         noResponse: "Too bad! I already booked everything. You are coming with me"
@@ -83,7 +83,7 @@ const CONFIG = {
     // Itinerary for Rabat based on your PDF
     rabatItinerary: {
         title: "Our Date to Rabat 🇲🇦",
-        subtitle: "A day of art, history, and us...",
+        subtitle: "A day of art, history, and us...❤️",
         slides: [
             {
                 // Stop 1: Modern Art Museum [cite: 2, 10]
@@ -123,12 +123,12 @@ const CONFIG = {
                 options: [
                     { 
                         label: "Nachos Gratinés & Jalapeños 🧀", 
-                        response: "Spicy & Cheesy Christopher! 🌶️",
+                        response: "Spicy & Cheesy Chris!🌶️",
                         image: "./images/menu-nachos-chris.png"
                     },
                     { 
                         label: "Sticks de Mozzarella Croustillants 🥖", 
-                        response: "The 'Cheesiest' Guy You Know! 🧀",
+                        response: "The 'Cheesiest' Guy You Know 🧀",
                         image: "./images/menu-mozzarella-chris.png"
                     }
                 ]
@@ -138,12 +138,12 @@ const CONFIG = {
                 options: [
                     { 
                         label: "L'Ultime Smash Burger 🍔", 
-                        response: "Juicy, Real & 100% Beefcake Christopher! 💪",
+                        response: "Juicy, Real & 100% Beefcake Chris",
                         image: "./images/menu-burger-chris.png" 
                     },
                     { 
                         label: "Tacos au Poulet Épicé 🌮", 
-                        response: "Hot, Fun & Zesty Christopher! 🌮",
+                        response: "Hot, Fun & Zesty Chris🌮",
                         image: "./images/menu-tacos-chris.png" 
                     }
                 ]
@@ -153,12 +153,12 @@ const CONFIG = {
                 options: [
                     { 
                         label: "Brownie Triple Chocolat 🍫", 
-                        response: "Warm, Sweet & Melty Christopher! 🫠",
+                        response: "Warm, Sweet & Melty Chris🫠",
                         image: "./images/menu-brownie-chris.png" 
                     },
                     { 
                         label: "Milkshake à la Fraise 🥤", 
-                        response: "Cool, Smooth & Sweet Christopher! 🍓",
+                        response: "Cool, Smooth & Sweet Chris🍓",
                         image: "./images/menu-shake-chris.png" 
                     }
                 ]
