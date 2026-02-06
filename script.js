@@ -92,7 +92,7 @@ function setupMusic() {
     if (!config.music.enabled) return;
 
     elements.musicSource.src = config.music.musicUrl;
-    elements.bgMusic.volume = 0.5;
+    elements.bgMusic.volume = config.music.volume;
     elements.bgMusic.load();
 
     if (config.music.autoplay) {

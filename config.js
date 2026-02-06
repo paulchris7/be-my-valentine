@@ -18,7 +18,7 @@ const CONFIG = {
             text: "Do you like me?",                                    // First interaction
             yesBtn: "Yes",                                             // Text for "Yes" button
             noBtn: "No",                                               // Text for "No" button
-            secretAnswer: "I don't like you, I love you! ❤️"           // Secret hover message
+            secretAnswer: "I don't like you, I love youuuuu❤️"           // Secret hover message
         },
         second: {
             text: "How much do you love me?",                          // For the love meter
@@ -34,15 +34,15 @@ const CONFIG = {
 
     // Love meter messages
     loveMessages: {
-        extreme: "WOOOOW You love me that much?? 🥰🚀💝",  // Shows when they go past 5000%
-        high: "To infinity and beyond! 🚀💝",              // Shows when they go past 1000%
-        normal: "And beyond! 🥰"                           // Shows when they go past 100%
+        extreme: "Yessssss🚀💝",  // Shows when they go past 5000%
+        high: "Emwenl yeeeeeee 🚀💝",              // Shows when they go past 1000%
+        normal: "E noul yeeeeeeeeee 🥰"                           // Shows when they go past 100%
     },
 
     // Messages that appear after "Yes!"
     celebration: {
-        title: "Yay! I'm the luckiest person in the world! 🎉💝💖💝💓",
-        message: "Now come get your gift, a big warm hug and a huge kiss!",
+        title: "I'm the luckiest person in the world💓",
+        message: "I promise to make every day feel as special as Valentine Day. I love you so much manmie 💖",
         emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
     },
 
@@ -69,7 +69,8 @@ const CONFIG = {
     music: {
         enabled: true,                     // Music feature is enabled
         autoplay: true,                    // Try to autoplay (note: some browsers may block this)
-        musicUrl: "https://res.cloudinary.com/dncywqfpb/video/upload/v1738399057/music_qrhjvy.mp3", // Music streaming URL
+        musicUrl: "https://res.cloudinary.com/dzm3up8i2/video/upload/v1770404177/Fem-kadow_sc0lxl.mp3", // Music streaming URL
+        volume: 0.5
     },
 
     monologue: {
