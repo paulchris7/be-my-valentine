@@ -86,27 +86,27 @@ const CONFIG = {
         slides: [
             {
                 // Stop 1: Modern Art Museum [cite: 2, 10]
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Mus%C3%A9e_Mohammed_VI_d%27art_moderne_et_contemporain.jpg/800px-Mus%C3%A9e_Mohammed_VI_d%27art_moderne_et_contemporain.jpg", 
+                image: "images\musée-mohammed-6.png", 
                 caption: "Starting with art at the Musée Mohammed VI 🎨"
             },
             {
                 // Stop 2: Mausoleum Mohammed V [cite: 5, 16]
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Mausoleum_of_Mohammed_V%2C_Rabat.jpg/800px-Mausoleum_of_Mohammed_V%2C_Rabat.jpg",
+                image: "images\mausolée-mohammed-5.png",
                 caption: "Visiting the magnificent Mausolée Mohammed V 🏛️"
             },
             {
                 // Stop 3: Kasbah des Oudayas [cite: 8, 12, 13]
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Kasbah_des_Oudayas_Rabat.jpg/800px-Kasbah_des_Oudayas_Rabat.jpg",
+                image: "images\kabash-oudouyas.png",
                 caption: "Getting lost together in the blue streets of the Kasbah 💙"
             },
             {
                 // Stop 4: Andalusian Gardens [cite: 3, 14]
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Jardin_Andalou_Rabat.jpg/800px-Jardin_Andalou_Rabat.jpg",
+                image: "images\jardin-andalou.png",
                 caption: "A romantic walk in the Jardins Andalous 🌿"
             },
             {
                 // Stop 5: Oudayas Museum [cite: 4, 9, 15]
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Museum_of_Oudayas_1.jpg/800px-Museum_of_Oudayas_1.jpg",
+                image: "images\musée-oudayas.png",
                 caption: "Discovering treasures at the Musée des Oudayas 🏺"
             }
         ],
