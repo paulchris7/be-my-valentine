@@ -55,7 +55,7 @@ const config = window.VALENTINE_CONFIG;
 window.addEventListener('DOMContentLoaded', () => {
     // 1. Set global titles
     document.title = config.pageTitle;
-    document.getElementById('valentineTitle').textContent = config.valentineName ? `${config.valentineName}, my love...` : "My Love";
+    document.getElementById('valentineTitle').textContent = config.valentineName ? `${config.valentineName}, mon amour` : "Mon amour";
 
     // 2. Setup Music
     setupMusic();

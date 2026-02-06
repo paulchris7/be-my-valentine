@@ -73,15 +73,15 @@ const CONFIG = {
     },
 
     monologue: {
-        text: "My dearest, before we begin, I need to tell you something... [User will fill this paragraph later]... So I must ask: Are you free on February 14th?",
+        text: "Ma chérie, je sais à quel point ce 14 février est important pour nous. C'est justement pour ça que j'ai voulu faire les choses un peu différemment cette année et te préparer ce petit site, juste pour toi. Alors j’ai une question toute simple à te poser : est-ce que tu es libre le 14 février ?",
         yesBtn: "Yes, I am ❤️",
         noBtn: "No, I'm busy",
-        noResponse: "Too bad! I already booked everything. You are coming with me! 😎"
+        noResponse: "Too bad! I already booked everything. You are coming with me"
     },
 
     // Itinerary for Rabat based on your PDF
     rabatItinerary: {
-        title: "Our Romantic Journey to Rabat 🇲🇦",
+        title: "Our Date to Rabat 🇲🇦",
         subtitle: "A day of art, history, and us...",
         slides: [
             {
@@ -114,56 +114,56 @@ const CONFIG = {
     },
 
     dinnerMenu: {
-        title: "The Valentine's Feast 🍔",
-        subtitle: "Pick your favorites! (Chef's Warning: It's all me)",
+        title: "Menu",
+        subtitle: "Choisi tes plats préféré (Chef's Warning: It's all me)",
         courses: {
             entree: {
-                title: "Appetizers",
+                title: "Entrées",
                 options: [
                     { 
-                        label: "Loaded Nachos with Jalapeños 🧀", 
+                        label: "Nachos Gratinés & Jalapeños 🧀", 
                         response: "Spicy & Cheesy Christopher! 🌶️",
-                        image: "./images/menu-nachos-chris.jpg"
+                        image: "./images/menu-nachos-chris.png"
                     },
                     { 
-                        label: "Crispy Mozzarella Sticks 🥖", 
+                        label: "Sticks de Mozzarella Croustillants 🥖", 
                         response: "The 'Cheesiest' Guy You Know! 🧀",
-                        image: "./images/menu-mozzarella-chris.jpg"
+                        image: "./images/menu-mozzarella-chris.png"
                     }
                 ]
             },
             main: {
-                title: "Main Course",
+                title: "Plats Principaux",
                 options: [
                     { 
-                        label: "The Ultimate Smash Burger 🍔", 
+                        label: "L'Ultime Smash Burger 🍔", 
                         response: "Juicy, Real & 100% Beefcake Christopher! 💪",
-                        image: "./images/menu-burger-chris.jpg" 
+                        image: "./images/menu-burger-chris.png" 
                     },
                     { 
-                        label: "Spicy Chicken Tacos 🌮", 
+                        label: "Tacos au Poulet Épicé 🌮", 
                         response: "Hot, Fun & Zesty Christopher! 🌮",
-                        image: "./images/menu-tacos-chris.jpg" 
+                        image: "./images/menu-tacos-chris.png" 
                     }
                 ]
             },
             dessert: {
-                title: "Sweet Treats",
+                title: "Desserts",
                 options: [
                     { 
-                        label: "Triple Chocolate Brownie 🍫", 
+                        label: "Brownie Triple Chocolat 🍫", 
                         response: "Warm, Sweet & Melty Christopher! 🫠",
-                        image: "./images/menu-brownie-chris.jpg" 
+                        image: "./images/menu-brownie-chris.png" 
                     },
                     { 
-                        label: "Strawberry Milkshake 🥤", 
+                        label: "Milkshake à la Fraise 🥤", 
                         response: "Cool, Smooth & Sweet Christopher! 🍓",
                         image: "./images/menu-shake-chris.jpg" 
                     }
                 ]
             }
         },
-        finishBtn: "I'm Stuffed! (With Love) 💋"
+        finishBtn: "Satisfaiteeeeee💋"
     }
 };
 
