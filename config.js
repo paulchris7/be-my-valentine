@@ -70,9 +70,13 @@ const CONFIG = {
         enabled: true,                     // Music feature is enabled
         autoplay: true,                    // Try to autoplay (note: some browsers may block this)
         musicUrl: "https://res.cloudinary.com/dncywqfpb/video/upload/v1738399057/music_qrhjvy.mp3", // Music streaming URL
-        startText: "🎵 Play Music",        // Button text to start music
-        stopText: "🔇 Stop Music",         // Button text to stop music
-        volume: 0.5                        // Volume level (0.0 to 1.0)
+    },
+
+    monologue: {
+        text: "My dearest, before we begin, I need to tell you something... [User will fill this paragraph later]... So I must ask: Are you free on February 14th?",
+        yesBtn: "Yes, I am ❤️",
+        noBtn: "No, I'm busy",
+        noResponse: "Too bad! I already booked everything. You are coming with me! 😎"
     },
 
     // Itinerary for Rabat based on your PDF

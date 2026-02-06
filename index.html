@@ -21,12 +21,18 @@
         <h1 id="valentineTitle"></h1>
         
         <!-- Music Player -->
-        <div id="musicControls" class="music-controls">
-            <button id="musicToggle" class="music-btn">🎵 Play Music</button>
-            <audio id="bgMusic" loop>
-                <source id="musicSource" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+        <audio id="bgMusic" loop>
+            <source id="musicSource" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- 0. Monologue Section -->
+        <div id="monologueSection" class="question-section">
+            <p id="monologueText"></p>
+            <div class="buttons-container">
+                <button class="cute-btn" id="monologueYes"></button>
+                <button class="cute-btn" id="monologueNo"></button>
+            </div>
         </div>
 
         <!-- 1. Itinerary Section -->

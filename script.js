@@ -10,12 +10,18 @@ const courses = ['entree', 'main', 'dessert'];
 // DOM Elements
 const elements = {
     // Sections
+    monologueSection: document.getElementById('monologueSection'),
     itinerarySection: document.getElementById('itinerarySection'),
     dinnerMenuSection: document.getElementById('dinnerMenuSection'),
     question1: document.getElementById('question1'),
     question2: document.getElementById('question2'),
     question3: document.getElementById('question3'),
     celebration: document.getElementById('celebration'),
+
+    // Monologue Elements
+    monologueText: document.getElementById('monologueText'),
+    monologueYes: document.getElementById('monologueYes'),
+    monologueNo: document.getElementById('monologueNo'),
 
     // Itinerary Elements
     itineraryTitle: document.getElementById('itineraryTitle'),
@@ -35,8 +41,6 @@ const elements = {
     resultText: document.getElementById('resultText'),
 
     // Music Elements
-    musicControls: document.getElementById('musicControls'),
-    musicToggle: document.getElementById('musicToggle'),
     bgMusic: document.getElementById('bgMusic'),
     musicSource: document.getElementById('musicSource')
 };
@@ -62,8 +66,11 @@ window.addEventListener('DOMContentLoaded', () => {
     // 4. Initialize Questions (Text & Logic)
     setupQuestions();
 
-    // 5. Show first section
-    showSection('itinerarySection');
+    // 5. Initialize Monologue
+    setupMonologue();
+
+    // 6. Show first section
+    showSection('monologueSection');
 
     // Mobile Fix: Global click to start music if autoplay failed
     document.addEventListener('click', handleGlobalClick, { once: true });
@@ -82,16 +89,11 @@ function showSection(sectionId) {
 // ============================================
 
 function setupMusic() {
-    if (!config.music.enabled) {
-        elements.musicControls.style.display = 'none';
-        return;
-    }
+    if (!config.music.enabled) return;
 
     elements.musicSource.src = config.music.musicUrl;
-    elements.bgMusic.volume = config.music.volume || 0.5;
+    elements.bgMusic.volume = 0.5;
     elements.bgMusic.load();
-
-    elements.musicToggle.addEventListener('click', toggleMusic);
 
     if (config.music.autoplay) {
         playMusic();
@@ -101,21 +103,9 @@ function setupMusic() {
 function playMusic() {
     const playPromise = elements.bgMusic.play();
     if (playPromise !== undefined) {
-        playPromise.then(() => {
-            elements.musicToggle.textContent = config.music.stopText;
-        }).catch(error => {
+        playPromise.catch(error => {
             console.log("Autoplay prevented by browser");
-            elements.musicToggle.textContent = config.music.startText;
         });
-    }
-}
-
-function toggleMusic() {
-    if (elements.bgMusic.paused) {
-        playMusic();
-    } else {
-        elements.bgMusic.pause();
-        elements.musicToggle.textContent = config.music.startText;
     }
 }
 
@@ -124,6 +114,34 @@ function handleGlobalClick() {
     if (config.music.enabled && elements.bgMusic.paused) {
         playMusic();
     }
+}
+
+// ============================================
+// MONOLOGUE LOGIC
+// ============================================
+
+function setupMonologue() {
+    elements.monologueText.textContent = config.monologue.text;
+    elements.monologueYes.textContent = config.monologue.yesBtn;
+    elements.monologueNo.textContent = config.monologue.noBtn;
+
+    elements.monologueYes.addEventListener('click', () => handleMonologue('yes'));
+    elements.monologueNo.addEventListener('click', () => handleMonologue('no'));
+}
+
+function handleMonologue(answer) {
+    if (answer === 'yes') {
+        startItinerary();
+    } else {
+        elements.monologueText.textContent = config.monologue.noResponse;
+        setTimeout(() => {
+            startItinerary();
+        }, 2000);
+    }
+}
+
+function startItinerary() {
+    showSection('itinerarySection');
 }
 
 // ============================================

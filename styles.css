@@ -319,6 +319,14 @@ p {
     line-height: 1.6;
 }
 
+#monologueText {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
 /* Celebration */
 .celebration-text {
     font-size: 2rem;
