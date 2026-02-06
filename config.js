@@ -158,7 +158,7 @@ const CONFIG = {
                     { 
                         label: "Milkshake à la Fraise 🥤", 
                         response: "Cool, Smooth & Sweet Christopher! 🍓",
-                        image: "./images/menu-shake-chris.jpg" 
+                        image: "./images/menu-shake-chris.png" 
                     }
                 ]
             }
